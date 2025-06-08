@@ -197,7 +197,14 @@ fun Container(
                             64.dp
                         } else 24.dp
                     )
-                    .align(Alignment.BottomCenter)
+                    .padding(
+                        horizontal = if (!landscapeMode) {
+                            0.dp
+                        } else {
+                            72.dp
+                        }
+                    )
+                    .align(Alignment.BottomStart)
             )
 
             Icon(
